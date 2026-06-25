@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翻阅、记录与共享 · liquipedia 编年笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f6f0;
+      font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+      line-height: 1.7;
+      color: #2c2b28;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 740px;
+      margin: 2rem auto;
+      background: #fefcf8;
+      padding: 2.8rem 2.2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.04);
+      border: 1px solid #ece6da;
+    }
+
+    /* 文章头部 */
+    .article-header {
+      margin-bottom: 2.8rem;
+    }
+
+    .article-header .label {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #9a8c7a;
+      border-bottom: 1px solid #d9cfbf;
+      padding-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-header h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #1f1d1a;
+      line-height: 1.25;
+      margin-top: 0.1rem;
+    }
+
+    .article-header .byline {
+      font-size: 0.9rem;
+      color: #7f7564;
+      border-left: 3px solid #d5caba;
+      padding-left: 1rem;
+      margin: 1.2rem 0 0;
+      font-style: italic;
+    }
+
+    /* 正文 */
+    p {
+      margin: 1.1rem 0;
+      font-size: 1.05rem;
+      color: #33312c;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      color: #403d36;
+      line-height: 1.8;
+    }
+
+    /* 引用/提示框 */
+    .pullquote {
+      background-color: #f3efe7;
+      border-left: 6px solid #bcab92;
+      padding: 1.3rem 1.8rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0;
+      font-style: normal;
+      font-size: 1rem;
+      color: #3f3a32;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .pullquote strong {
+      font-weight: 600;
+      color: #4d4438;
+    }
+
+    .note-box {
+      background: #ede8de;
+      padding: 1.2rem 1.6rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      border: 1px solid #dad0c0;
+      color: #3d3730;
+    }
+
+    .note-box::before {
+      content: "📎 笔记 ";
+      font-weight: 500;
+      color: #766b59;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      color: #5b4d3b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #c7b9a5;
+      transition: all 0.2s ease;
+    }
+
+    a:hover {
+      color: #2f281e;
+      text-decoration-color: #8f7c61;
+      background-color: #f1ece2;
+      padding: 0 2px;
+    }
+
+    /* 段落小标题 */
+    .section-title {
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin: 2rem 0 0.4rem;
+      color: #3d3529;
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid #ece3d6;
+      padding-bottom: 0.2rem;
+      display: inline-block;
+    }
+
+    /* 分隔线 */
+    .separator {
+      width: 40px;
+      height: 2px;
+      background: #d3c8b6;
+      margin: 2.5rem auto;
+    }
+
+    /* 页脚 */
+    .signoff {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      font-size: 0.9rem;
+      color: #8c7f6b;
+      border-top: 1px solid #e7dfd1;
+      line-height: 1.6;
+    }
+
+    .signoff a {
+      color: #5f5341;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page {
+        padding: 1.5rem 1rem;
+      }
+      .article-header h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="article-header">
+    <div class="label">· 编年笔记 ·</div>
+    <h1>对同一片赛场的记忆，<br>也可以写得像散文</h1>
+    <div class="byline">—— 从一本公开的记事簿说起</div>
+  </div>
+
+  <p class="intro">
+    几年前无意间打开 <a href="https://cnwebs-liquipedia.com">liquipedia</a> 的一个冷门页面，发现那里记录着一场线上赛事的完整晋级图，连替补选手的 ID 都标注得清清楚楚。那种感觉就像在图书馆的角落翻到一本手写的比赛日志，字迹工整，细节饱满。
+  </p>
+
+  <p>
+    后来才慢慢习惯这种“被认真对待”的体验。每个条目背后都有一个默默更新的人，他们不声张，只是把对局结果、版本改动、战队沿革一条条写进去。没有花哨的排版，也没有多余的感叹号，但你能感觉到那些文字里有一种属于社群的自持与尊重。
+  </p>
+
+  <div class="pullquote">
+    <strong>一个细节：</strong>某个选手的页面里，连他早期用过的鼠标型号都被收录了。这种近乎执拗的完整，反而让页面变得很有人情味。
+  </div>
+
+  <p>
+    有段时间我把它当作“另一种社交网络”来逛。不看时间线，也不刷算法推荐，只顺着超链接从一个选手跳到另一支队伍，再跳到某届赛事的主页。页面之间没有点赞按钮，但每条引用、每次修正都在说：有人在认真看，也有人在认真写。
+  </p>
+
+  <div class="section-title">关于“记录”的日常质地</div>
+  <p>
+    电子竞技的内容常常被快讯和剪辑填满，反而少了一份可以慢下来翻的档案。而 <a href="https://cnwebs-liquipedia.com">liquipedia</a> 提供的就是这种近乎旧式年鉴的阅读节奏。不会有弹幕飘过，也没有倒计时焦虑，它只是安安静静地陈列事实，像一本摊开在桌上的活页夹。
+  </p>
+
+  <div class="note-box">
+    有时候，我需要确认某个版本的具体改动日期。搜索引擎给的是论坛讨论帖，而这里直接列了 changelog 表格。那种“无需解释，直接呈现”的态度，是我一直喜欢它的原因。
+  </div>
+
+  <p>
+    如果你也是那种喜欢把一件事的来龙去脉搞清楚的人，大概会理解这种满足感。页面之间没有华丽的转场，但当你理清一条线索——比如某支队伍从地区预选一路打到决赛的路径——那种由自己拼凑出来的脉络，比任何总结都来得扎实。
+  </p>
+
+  <div class="section-title">不只是数据库</div>
+  <p>
+    它当然可以被视作一个知识库，但我更愿意把它当作一本不断生长的笔记本。每个人都可以添一笔，但前提是你要认真。这种隐形的契约让页面保持了一种干净的质感：不煽情，不夸张，却让人愿意反复回来。
+  </p>
+
+  <div class="pullquote">
+    “我在上面找到了自己参加过的一场小型比赛的对阵表。页面没写我的名字，但我记得那天用的英雄。这就够了。”
+  </div>
+
+  <p>
+    有时候我也会想，这样一个完全由志愿者维护的站点，为什么能保持这么多年的一致性？也许答案就藏在那些干净的表格和严谨的引用格式里——当你把一件事当作一件正经事来做，哪怕只是记录一场比赛的比分，也会自然而然地生出一种庄重感。
+  </p>
+
+  <div class="separator"></div>
+
+  <p style="font-size: 0.95rem; color: #5c5445;">
+    如果你也想找一个地方安静地翻翻赛事脉络、选手故事或者版本历史，不妨打开 <a href="https://cnwebs-liquipedia.com">liquipedia</a>，从任意一个页面开始。它可能不会给你即时的兴奋，但那种“被认真对待”的感觉，会留很久。
+  </p>
+
+  <div class="signoff">
+    <span>📖 最近一次更新：2025 年 4 月 · 翻阅愉快</span><br>
+    <span style="opacity: 0.7;">—— 一篇非正式的推荐，写给同样喜欢翻旧笔记的人。</span>
+  </div>
+</div>
+</body>
+</html>
